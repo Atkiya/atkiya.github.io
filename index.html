@@ -8,17 +8,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
 
         :root {
-            --parchment: #fdf6f5;
-            --ink: #2c3e50;
-            --gold: #d4af37;
-            --rose: #b56576;
+            --parchment: #F7F5EF;
+            --ink: #263C35;
+            --gold: #BBA477;
+            --rose: #87758F;
         }
 
         * { box-sizing: border-box; }
 
         body {
             font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, #2a2d34 0%, #1a1c20 100%);
+            background: linear-gradient(135deg, #293D37 0%, #172923 100%);
             color: var(--ink);
             line-height: 1.6;
             margin: 0;
@@ -31,9 +31,9 @@
             inset: 0;
             pointer-events: none;
             background-image:
-                radial-gradient(circle at 20% 40%, rgba(212, 175, 55, 0.08) 2px, transparent 3px),
-                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 2px, transparent 3px),
-                radial-gradient(circle at 60% 70%, rgba(212, 175, 55, 0.05) 3px, transparent 4px);
+                radial-gradient(circle at 20% 40%, rgba(211, 218, 193, 0.08) 2px, transparent 3px),
+                radial-gradient(circle at 80% 20%, rgba(211, 218, 193, 0.08) 2px, transparent 3px),
+                radial-gradient(circle at 60% 70%, rgba(211, 218, 193, 0.05) 3px, transparent 4px);
             z-index: 0;
         }
 
@@ -43,7 +43,7 @@
             top: 0;
             z-index: 20;
             width: 100%;
-            background: rgba(253, 250, 245, 0.97);
+            background: rgba(247, 245, 239, 0.97);
             -webkit-backdrop-filter: blur(12px);
             backdrop-filter: blur(12px);
             border-bottom: 2px solid var(--gold);
@@ -93,8 +93,8 @@
         .nav-links a:hover,
         .nav-links a:focus-visible {
             color: var(--rose);
-            background: #fff3ed;
-            border-color: rgba(212, 175, 55, 0.65);
+            background: #F0EDF4;
+            border-color: rgba(187, 164, 119, 0.68);
             text-shadow: none;
             outline: none;
         }
@@ -111,7 +111,7 @@
             max-width: 920px;
             margin: 50px auto;
             padding: 50px;
-            background-color: #fdfaf5;
+            background-color: #FAF8F1;
             border: 8px double var(--gold);
             border-radius: 5px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.5);
@@ -119,17 +119,7 @@
             z-index: 1;
         }
 
-        .container::before, .container::after {
-            content: "\2766";
-            position: absolute;
-            top: 15px;
-            font-size: 1.5em;
-            color: var(--gold);
-        }
-        .container::before { left: 20px; }
-        .container::after { right: 20px; }
-
-        .storybook-image {
+.storybook-image {
             width: 100%;
             max-height: 340px;
             object-fit: cover;
@@ -150,7 +140,7 @@
             border: 3px solid var(--gold);
             border-radius: 50%;
             filter: sepia(0.25);
-            box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.10), 0 8px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 0 0 6px rgba(187, 164, 119, 0.14), 0 8px 20px rgba(0,0,0,0.12);
         }
 
         h1, h2, h3 {
@@ -164,23 +154,21 @@
             font-size: 2.8em;
             margin-bottom: 5px;
             letter-spacing: 2px;
-            text-shadow: 1px 1px 4px rgba(212, 175, 55, 0.3);
+            text-shadow: 1px 1px 4px rgba(187, 164, 119, 0.24);
         }
 
         .subtitle {
             text-align: center;
             font-style: italic;
             margin-bottom: 30px;
-            color: #666;
+            color: #64726B;
             font-size: 1.2em;
         }
-
-        .decorative-break {
-            text-align: center;
-            font-size: 1.5em;
-            color: var(--gold);
+        .section-divider {
+            height: 1px;
+            border: 0;
+            background: linear-gradient(90deg, transparent, rgba(187, 164, 119, 0.9), transparent);
             margin: 30px 0;
-            letter-spacing: 10px;
         }
 
         h2 {
@@ -201,11 +189,14 @@
         }
 
         li::before {
-            content: "\2767";
+            content: "";
             position: absolute;
-            left: 0;
-            font-size: 1em;
-            color: var(--gold);
+            left: 6px;
+            top: 0.82em;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
         }
 
         a {
@@ -238,18 +229,18 @@
 
         .fairytale-card {
             margin: 0;
-            background: #fffaf0;
+            background: #FBF9F2;
             border: 2px solid var(--gold);
             border-radius: 5px;
             padding: 7px;
-            box-shadow: 0 7px 18px rgba(44, 62, 80, 0.12);
+            box-shadow: 0 7px 18px rgba(38, 60, 53, 0.12);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
             overflow: hidden;
         }
 
         .fairytale-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 11px 24px rgba(181, 101, 118, 0.22);
+            box-shadow: 0 11px 24px rgba(135, 117, 143, 0.20);
         }
 
         .fairytale-card img {
@@ -290,8 +281,8 @@
             padding: 9px 12px;
             text-align: center;
             font-style: italic;
-            color: #70545b;
-            background: #fffaf0;
+            color: #58665D;
+            background: #FBF9F2;
         }
 
         .github-grid {
@@ -305,7 +296,7 @@
             border: 1px solid var(--gold);
             border-radius: 4px;
             padding: 20px;
-            background: linear-gradient(to bottom right, #fff, #fdfaf5);
+            background: linear-gradient(to bottom right, #fff, #FAF8F1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -314,7 +305,7 @@
 
         .github-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 8px 20px rgba(187, 164, 119, 0.20);
         }
 
         .github-card h3 {
@@ -330,7 +321,7 @@
         /* Research and manuscripts in progress */
         .research-note {
             text-align: center;
-            color: #756a68;
+            color: #69756D;
             font-style: italic;
             font-size: 1.08em;
             margin: 0 auto 22px;
@@ -346,7 +337,7 @@
 
         .research-card {
             position: relative;
-            background: linear-gradient(115deg, #fffdf8, #fff7f3);
+            background: linear-gradient(115deg, #FFFDF8, #F5F1F7);
             border: 1px solid rgba(212, 175, 55, 0.8);
             border-left: 5px solid var(--rose);
             border-radius: 4px;
@@ -357,7 +348,7 @@
 
         .research-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 9px 20px rgba(181, 101, 118, 0.15);
+            box-shadow: 0 9px 20px rgba(135, 117, 143, 0.14);
         }
 
         .research-card h3 {
@@ -376,7 +367,7 @@
 
         .research-status {
             display: inline-block;
-            border: 1px solid rgba(181, 101, 118, 0.45);
+            border: 1px solid rgba(135, 117, 143, 0.42);
             border-radius: 20px;
             padding: 3px 10px;
             color: var(--rose);
@@ -388,9 +379,9 @@
         .image-credit {
             margin-top: 35px;
             padding-top: 15px;
-            border-top: 1px solid rgba(212, 175, 55, 0.6);
+            border-top: 1px solid rgba(187, 164, 119, 0.6);
             text-align: center;
-            color: #756a68;
+            color: #69756D;
             font-size: 0.92em;
         }
 
@@ -427,6 +418,75 @@
             .github-grid { grid-template-columns: 1fr; }
             .storybook-image { max-height: 240px; }
         }
+
+        /* Refined fairytale palette: forest green, moonlit lavender and antique gold */
+        :root {
+            --parchment: #F7F5EF;
+            --ink: #263C35;
+            --gold: #BBA477;
+            --rose: #87758F;
+            --sage: #8FA596;
+            --mist: #F0EDF4;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #FCFAF4 0%, #F7F5EF 68%, #F4F0F5 100%);
+            border-color: var(--gold);
+            box-shadow: 0 18px 48px rgba(9, 22, 17, 0.34);
+        }
+
+        .fairy-nav {
+            background: rgba(247, 245, 239, 0.97);
+            border-bottom-color: rgba(187, 164, 119, 0.95);
+            box-shadow: 0 5px 18px rgba(16, 31, 25, 0.16);
+        }
+
+        .storybook-image, .illustration-small, .fairytale-card, .image-banner {
+            border-color: var(--gold);
+        }
+
+        .storybook-image { filter: saturate(0.82) contrast(1.04) brightness(0.96); }
+        .illustration-small { filter: saturate(0.82); }
+
+        .fairytale-card {
+            background: #FCFAF4;
+            box-shadow: 0 7px 18px rgba(38, 60, 53, 0.10);
+        }
+
+        .fairytale-card:hover {
+            box-shadow: 0 11px 24px rgba(85, 74, 98, 0.16);
+        }
+
+        .fairytale-card figcaption, .image-banner figcaption {
+            color: #58665D;
+            background: #F8F6F0;
+        }
+
+        .research-card {
+            background: linear-gradient(115deg, #FCFAF4, #F3EFF6);
+            border-color: rgba(187, 164, 119, 0.75);
+            border-left-color: var(--rose);
+        }
+
+        .github-card {
+            background: linear-gradient(140deg, #FFFEFA, #F4F1F6);
+            border-color: rgba(187, 164, 119, 0.88);
+        }
+
+        .github-card:hover {
+            box-shadow: 0 8px 20px rgba(85, 74, 98, 0.15);
+        }
+
+        h1, h2, h3 { color: var(--rose); }
+        h2 { border-bottom-color: rgba(187, 164, 119, 0.88); }
+        a:hover { text-shadow: none; }
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(187, 164, 119, 0.8), transparent);
+        }
+        .image-credit { color: #69756D; border-top-color: rgba(187, 164, 119, 0.65); }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+        }
     </style>
 </head>
 <body>
@@ -459,12 +519,12 @@
 
     <div class="contact-info">
         <a href="mailto:atkiyamaisha112233@gmail.com">atkiyamaisha112233@gmail.com</a> |
-        <a href="https://atkiya.github.io">atkiya.github.io</a><br><br>
-        <a href="www.linkedin.com/in/atkiya-maisha-032140250">LinkedIn</a> |
-        <a href="https://github.com/Atkiya">GitHub</a> |
-        <a href="https://codeforces.com/profile/Atkiya">Codeforces</a> |
-        <a href="https://atcoder.jp/users/Atkiya">Atcoder</a> |
-        <a href="https://www.codechef.com/users/atkiyamaisha">Codechef</a>
+        <a href="https://atkiya.github.io" target="_blank" rel="noopener noreferrer">atkiya.github.io</a><br><br>
+        <a href="https://bd.linkedin.com/in/atkiya-maisha-032140250" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+        <a href="https://github.com/Atkiya" target="_blank" rel="noopener noreferrer">GitHub</a> |
+        <a href="https://codeforces.com/profile/Atkiya" target="_blank" rel="noopener noreferrer">Codeforces</a> |
+        <a href="https://atcoder.jp/users/Atkiya" target="_blank" rel="noopener noreferrer">Atcoder</a> |
+        <a href="https://www.codechef.com/users/atkiyamaisha" target="_blank" rel="noopener noreferrer">Codechef</a>
     </div>
 
     <!-- NEW: a three-scene fairytale gallery -->
@@ -486,7 +546,7 @@
         </figure>
     </div>
 
-    <div class="decorative-break">&#x2766; &sim; &#x2766; &sim; &#x2766;</div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <h2 id="education">Scholarly Pursuits</h2>
     <ul>
@@ -517,7 +577,7 @@
         <figcaption>Every great quest begins with curiosity — and a map into the unknown.</figcaption>
     </figure>
 
-    <div class="decorative-break">&#x2766; &sim; &#x2766; &sim; &#x2766;</div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <h2 id="interests">Scholarly Curiosities &amp; Interests</h2>
     <ul>
@@ -527,7 +587,7 @@
         <li><strong>Sustainable Software:</strong> The noble pursuit of creating enduring digital estates that consume fewer resources and tread lightly upon the earth.</li>
     </ul>
 
-    <div class="decorative-break">&#x2766; &sim; &#x2766; &sim; &#x2766;</div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <h2 id="experience">Endeavours &amp; Employment</h2>
     <ul>
@@ -550,7 +610,7 @@
         <figcaption>A little golden-hour magic between one chapter and the next.</figcaption>
     </figure>
 
-    <div class="decorative-break">&#x2766; &sim; &#x2766; &sim; &#x2766;</div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <h2 id="skills">The Accomplishments of a Lady</h2>
     <ul>
@@ -558,7 +618,7 @@
         <li><strong>Spoken Tongues:</strong> Bengali (Native), English (C1/C2), Spanish (A1), Hindi (B1/B2/C1).</li>
     </ul>
 
-    <div class="decorative-break">&#x2766; &sim; &#x2766; &sim; &#x2766;</div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <h2 id="achievements">Triumphs &amp; Patronage</h2>
     <ul>
@@ -570,7 +630,7 @@
         <li>Best Female Performer at the Intra-University Programming Contest, Summer 2025.</li>
     </ul>
 
-    <div class="decorative-break">&#x2766; &sim; &#x2766; &sim; &#x2766;</div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <h2 id="research">Manuscripts in Preparation / Ongoing Research</h2>
     <p class="research-note">Current research directions and manuscripts in preparation; these works are not yet presented as published papers.</p>
@@ -592,32 +652,32 @@
         </article>
     </div>
 
-    <div class="decorative-break">&#x2766; &sim; &#x2766; &sim; &#x2766;</div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <h2 id="projects">Exhibitions of Code</h2>
     <div class="github-grid">
         <div class="github-card">
-            <h3><a href="https://github.com/Atkiya/rasabot">Rasa Chatbot</a></h3>
+            <h3><a href="https://github.com/Atkiya/rasabot" target="_blank" rel="noopener noreferrer">Rasa Chatbot</a></h3>
             <p>A conversational agent designed with logical grace to converse with scholars and commoners alike.</p>
         </div>
         <div class="github-card">
-            <h3><a href="https://github.com/Atkiya/hybridbot">Hybrid Chatbot using Rasa+RAG+SLM(TinyLlama)</a></h3>
+            <h3><a href="https://github.com/Atkiya/hybridbot" target="_blank" rel="noopener noreferrer">Hybrid Chatbot using Rasa+RAG+SLM(TinyLlama)</a></h3>
             <p>A sophisticated union of retrieval-augmented generation and localized language modeling.</p>
         </div>
         <div class="github-card">
-            <h3><a href="https://github.com/Atkiya/BookieChan">Bookichan Ebook App</a></h3>
+            <h3><a href="https://github.com/Atkiya/BookieChan" target="_blank" rel="noopener noreferrer">Bookichan Ebook App</a></h3>
             <p>A digital library accommodating volumes of knowledge, wrapped in an elegant interface.</p>
         </div>
         <div class="github-card">
-            <h3><a href="#edit-repo-link-4">Tetris 2D Game</a></h3>
+            <h3><a href="https://github.com/Atkiya/Tetris2D" target="_blank" rel="noopener noreferrer">Tetris 2D Game</a></h3>
             <p>An intricate puzzle of falling geometry, bound by the strict laws of physics and code.</p>
         </div>
         <div class="github-card">
-            <h3><a href="https://github.com/shawqiaftab/Progga---Online-Learning-Management-System">Progga-Online Learning Platform</a></h3>
+            <h3><a href="https://github.com/shawqiaftab/Progga---Online-Learning-Management-System" target="_blank" rel="noopener noreferrer">Progga-Online Learning Platform</a></h3>
             <p>A grand academy in the digital realm, providing tools for the enlightenment of eager minds.</p>
         </div>
         <div class="github-card">
-            <h3><a href="https://github.com/Atkiya/gomoku_game">Gomoku Game</a></h3>
+            <h3><a href="https://github.com/Atkiya/gomoku_game" target="_blank" rel="noopener noreferrer">Gomoku Game</a></h3>
             <p>A strategic parlor game of five-in-a-row, requiring cunning, foresight, and a mastery of the board.</p>
         </div>
     </div>
@@ -641,39 +701,39 @@
                   <defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#222743"/><stop offset="1" stop-color="#885d79"/></linearGradient></defs>
                   <rect width="1200" height="600" fill="url(#g)"/>
                   <g fill="#fff0c9"><circle cx="100" cy="90" r="4"/><circle cx="270" cy="150" r="3"/><circle cx="430" cy="70" r="4"/><circle cx="690" cy="120" r="3"/><circle cx="850" cy="65" r="4"/><circle cx="1060" cy="150" r="3"/><circle cx="960" cy="250" r="4"/><circle cx="180" cy="300" r="3"/></g>
-                  <path d="M0 500 Q210 430 390 510 T760 490 T1200 480 V600 H0Z" fill="#273b3a"/>
+                  <path d="M0 500 Q210 430 390 510 T760 490 T1200 480 V600 H0Z" fill="#29473E"/>
                   <text x="600" y="555" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#fff0c9">A little stardust for the journey</text>
                 </svg>`,
             castle: `
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
-                  <defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#7d8eae"/><stop offset="1" stop-color="#f0b6a7"/></linearGradient></defs>
+                  <defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#6E8790"/><stop offset="1" stop-color="#E8D8CB"/></linearGradient></defs>
                   <rect width="1200" height="600" fill="url(#g)"/>
                   <circle cx="930" cy="120" r="60" fill="#fff0c9" opacity=".9"/>
                   <path d="M0 490 L160 350 300 470 460 330 630 485 820 360 1020 475 1200 340 V600 H0Z" fill="#465c5c"/>
-                  <g fill="#f9e7c3" stroke="#7a6471" stroke-width="8"><rect x="410" y="270" width="390" height="230"/><rect x="365" y="325" width="80" height="175"/><rect x="760" y="315" width="80" height="185"/><rect x="490" y="210" width="75" height="290"/><rect x="645" y="185" width="75" height="315"/></g>
-                  <g fill="#b56576"><path d="M480 215 L527 120 575 215Z"/><path d="M635 190 L682 90 730 190Z"/><path d="M350 330 L405 245 460 330Z"/><path d="M745 320 L800 225 855 320Z"/><path d="M405 270 L450 200 495 270Z"/></g>
-                  <g fill="#7d7180"><path d="M540 500 V425 A60 60 0 0 1 660 425 V500Z"/><rect x="505" y="320" width="44" height="70"/><rect x="660" y="300" width="44" height="70"/></g>
+                  <g fill="#F7F0DE" stroke="#776D7D" stroke-width="8"><rect x="410" y="270" width="390" height="230"/><rect x="365" y="325" width="80" height="175"/><rect x="760" y="315" width="80" height="185"/><rect x="490" y="210" width="75" height="290"/><rect x="645" y="185" width="75" height="315"/></g>
+                  <g fill="#87758F"><path d="M480 215 L527 120 575 215Z"/><path d="M635 190 L682 90 730 190Z"/><path d="M350 330 L405 245 460 330Z"/><path d="M745 320 L800 225 855 320Z"/><path d="M405 270 L450 200 495 270Z"/></g>
+                  <g fill="#81768A"><path d="M540 500 V425 A60 60 0 0 1 660 425 V500Z"/><rect x="505" y="320" width="44" height="70"/><rect x="660" y="300" width="44" height="70"/></g>
                   <path d="M0 520 Q210 455 420 530 T850 520 T1200 515 V600 H0Z" fill="#263a38"/>
                   <text x="600" y="570" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#fff5df">The castle beyond the forest</text>
                 </svg>`,
             cottage: `
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
-                  <defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#b9c9c5"/><stop offset="1" stop-color="#f4d9c4"/></linearGradient></defs>
+                  <defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#C5D4CC"/><stop offset="1" stop-color="#F0E0D2"/></linearGradient></defs>
                   <rect width="1200" height="600" fill="url(#g)"/>
-                  <g fill="#47635a"><circle cx="160" cy="205" r="140"/><circle cx="345" cy="175" r="120"/><circle cx="970" cy="180" r="170"/><circle cx="1110" cy="230" r="120"/></g>
-                  <path d="M310 340 L600 150 890 340Z" fill="#7c5b64"/><rect x="375" y="330" width="450" height="210" rx="7" fill="#f5e4c6" stroke="#7d5c5b" stroke-width="10"/><rect x="560" y="400" width="110" height="140" rx="50" fill="#7b5554"/><rect x="430" y="370" width="90" height="95" fill="#8bb2b2" stroke="#7d5c5b" stroke-width="8"/><rect x="685" y="370" width="90" height="95" fill="#8bb2b2" stroke="#7d5c5b" stroke-width="8"/>
-                  <g fill="#d17f91"><circle cx="250" cy="470" r="20"/><circle cx="285" cy="500" r="23"/><circle cx="930" cy="465" r="22"/><circle cx="970" cy="510" r="25"/></g>
-                  <path d="M0 530 Q300 490 600 540 T1200 520 V600 H0Z" fill="#456c53"/>
+                  <g fill="#405D50"><circle cx="160" cy="205" r="140"/><circle cx="345" cy="175" r="120"/><circle cx="970" cy="180" r="170"/><circle cx="1110" cy="230" r="120"/></g>
+                  <path d="M310 340 L600 150 890 340Z" fill="#7c5b64"/><rect x="375" y="330" width="450" height="210" rx="7" fill="#F7F0DE" stroke="#6C5B63" stroke-width="10"/><rect x="560" y="400" width="110" height="140" rx="50" fill="#6B5C68"/><rect x="430" y="370" width="90" height="95" fill="#8bb2b2" stroke="#6C5B63" stroke-width="8"/><rect x="685" y="370" width="90" height="95" fill="#8bb2b2" stroke="#6C5B63" stroke-width="8"/>
+                  <g fill="#BDA0BA"><circle cx="250" cy="470" r="20"/><circle cx="285" cy="500" r="23"/><circle cx="930" cy="465" r="22"/><circle cx="970" cy="510" r="25"/></g>
+                  <path d="M0 530 Q300 490 600 540 T1200 520 V600 H0Z" fill="#476A55"/>
                   <text x="600" y="575" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#fff5df">A cottage full of little wonders</text>
                 </svg>`,
             library: `
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
-                  <defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#294b4c"/><stop offset="1" stop-color="#b7a17d"/></linearGradient></defs>
+                  <defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#2B4941"/><stop offset="1" stop-color="#C9B99A"/></linearGradient></defs>
                   <rect width="1200" height="600" fill="url(#g)"/>
-                  <g fill="#f1ddb2" opacity=".9"><circle cx="180" cy="95" r="3"/><circle cx="1010" cy="130" r="4"/><circle cx="875" cy="80" r="3"/></g>
-                  <g stroke="#d6b979" stroke-width="8" fill="#684a43"><rect x="130" y="120" width="250" height="330"/><rect x="820" y="120" width="250" height="330"/></g>
-                  <g stroke-width="8"><path stroke="#b56576" d="M165 155V410 M205 155V410 M250 155V410 M295 155V410 M340 155V410"/><path stroke="#7c9b8a" d="M855 155V410 M900 155V410 M945 155V410 M990 155V410 M1035 155V410"/></g>
-                  <path d="M370 520 Q600 450 830 520" fill="none" stroke="#f0d9a5" stroke-width="18" stroke-linecap="round"/><rect x="505" y="280" width="190" height="165" rx="10" fill="#f6e7c8" stroke="#d6b979" stroke-width="8"/><path d="M600 288V435" stroke="#8b6d59" stroke-width="6"/><path d="M535 325 Q565 300 590 325 M615 325 Q645 300 675 325" stroke="#b56576" stroke-width="7" fill="none"/>
+                  <g fill="#F5EBD0" opacity=".9"><circle cx="180" cy="95" r="3"/><circle cx="1010" cy="130" r="4"/><circle cx="875" cy="80" r="3"/></g>
+                  <g stroke="#BBA477" stroke-width="8" fill="#5F4E4A"><rect x="130" y="120" width="250" height="330"/><rect x="820" y="120" width="250" height="330"/></g>
+                  <g stroke-width="8"><path stroke="#87758F" d="M165 155V410 M205 155V410 M250 155V410 M295 155V410 M340 155V410"/><path stroke="#A2B7A4" d="M855 155V410 M900 155V410 M945 155V410 M990 155V410 M1035 155V410"/></g>
+                  <path d="M370 520 Q600 450 830 520" fill="none" stroke="#E7DEC0" stroke-width="18" stroke-linecap="round"/><rect x="505" y="280" width="190" height="165" rx="10" fill="#F7F0DE" stroke="#BBA477" stroke-width="8"/><path d="M600 288V435" stroke="#75675D" stroke-width="6"/><path d="M535 325 Q565 300 590 325 M615 325 Q645 300 675 325" stroke="#87758F" stroke-width="7" fill="none"/>
                   <text x="600" y="570" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#fff5df">The enchanted library</text>
                 </svg>`,
             forest: `
